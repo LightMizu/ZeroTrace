@@ -19,7 +19,7 @@ class ChatView:
         self.page = page
         self.database = database
         self.messages_column = ft.Column(scroll=ft.ScrollMode.AUTO)
-        self.input_field = ft.TextField(hint_text="Type a message...", expand=True)
+        self.input_field = ft.TextField(hint_text="Type a message...", expand=True, on_submit=self.send_message)
         self.send_button = ft.IconButton(icon=ft.Icons.SEND, on_click=self.send_message)
         self.message_service = MessageService(messenger)
         self.__chat_service = chat_service

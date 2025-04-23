@@ -1,7 +1,7 @@
 import httpx
 from typing import Optional, List
 
-BASE_URL = "http://localhost:8000"
+BASE_URL = "https://zerotrace-production.up.railway.app"
 
 class API:
     @staticmethod

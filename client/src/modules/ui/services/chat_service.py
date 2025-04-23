@@ -25,7 +25,7 @@ class ChatService:
                     "public_key": finded_user["kem_public_key"],
                 }
                 dialog_hash = self.__messenger.generate_dialog_id(
-                    finded_user["kem_public_key"], finded_user["signature_public_key"]
+                    finded_user["kem_public_key"], self.__messenger.kem_public_key
                 )
                 print(self.mock_chats)
                 self.mock_chats[dialog_hash] = user
